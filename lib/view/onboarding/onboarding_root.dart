@@ -1,4 +1,4 @@
-import 'package:fitness_tracker/view/onboarding/pages/onboarding_a.dart';
+import 'package:fitness_tracker/view/onboarding/pages/onboarding_b.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingRoot extends StatelessWidget {
@@ -7,7 +7,7 @@ class OnboardingRoot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: OnboardingA(),
+      body: OnboardingB(),
     );
   }
 }
