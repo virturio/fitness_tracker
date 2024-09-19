@@ -1,3 +1,4 @@
+import 'package:fitness_tracker/core/config/theme/app_theme.dart';
 import 'package:fitness_tracker/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -28,10 +29,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp.router(
       title: 'Fitness Tracker',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.appTheme,
       routerConfig: appRouter,
     );
   }
