@@ -4,6 +4,7 @@ import 'package:fitness_tracker/core/config/assets/assets_vectors.dart';
 import 'package:fitness_tracker/core/config/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg_flutter.dart';
+import 'package:flutter/material.dart';
 
 class OnboardingB extends StatelessWidget {
   const OnboardingB({super.key});
