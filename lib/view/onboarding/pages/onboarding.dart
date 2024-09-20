@@ -4,20 +4,32 @@ import 'package:fitness_tracker/core/config/assets/assets_vectors.dart';
 import 'package:fitness_tracker/core/config/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg_flutter.dart';
-import 'package:flutter/material.dart';
 
-class OnboardingB extends StatelessWidget {
-  const OnboardingB({super.key});
+class OnboardingPage extends StatelessWidget {
+  final String vectorAssetName;
+  final String imageAssetName;
+  final String heroText;
+  final String actionText;
+  final int index;
+
+  const OnboardingPage({
+    super.key,
+    required this.vectorAssetName,
+    required this.heroText,
+    required this.actionText,
+    required this.index,
+    required this.imageAssetName,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(AssetImages.onboardingB),
+          image: AssetImage(imageAssetName),
         )),
         child: Center(
           child: Column(
@@ -36,23 +48,21 @@ class OnboardingB extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(AppVectors.workout),
+                    SvgPicture.asset(vectorAssetName),
                     const SizedBox(height: 16),
-                    const Text(
-                      "Start your journey towards a more active lifestyle",
+                    Text(
+                      heroText,
                       softWrap: true,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: AppColors.white,
                       ),
                     ),
                     const SizedBox(height: 16),
-                    Container(
-                      width: 50,
-                      height: 8,
-                      color: Colors.white,
+                    _IndicatorWidget(
+                      index: index,
                     )
                   ],
                 ),
@@ -60,11 +70,28 @@ class OnboardingB extends StatelessWidget {
               const SizedBox(height: 16),
               GlassButton(
                 onPressed: () {},
-                text: "Next",
+                text: actionText,
               )
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _IndicatorWidget extends StatelessWidget {
+  final int index;
+  const _IndicatorWidget({required this.index});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 8,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.white,
       ),
     );
   }

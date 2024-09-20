@@ -2,8 +2,8 @@ import 'package:fitness_tracker/core/config/theme/app_colors.dart';
 import 'package:fitness_tracker/core/config/assets/assets_images.dart';
 import 'package:flutter/material.dart';
 
-class OnboardingA extends StatelessWidget {
-  const OnboardingA({super.key});
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
