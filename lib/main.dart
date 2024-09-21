@@ -1,12 +1,17 @@
+import 'dart:io';
+
 import 'package:fitness_tracker/core/config/theme/app_theme.dart';
 import 'package:fitness_tracker/core/routes/routes.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  FlutterNativeSplash.remove();
+  if (!kIsWeb) {
+    FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+    FlutterNativeSplash.remove();
+  }
   runApp(const MyApp());
 }
 
