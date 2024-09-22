@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 
 abstract class AppTheme {
   static final appTheme = ThemeData(
-    useMaterial3: true,
-    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.purple),
-    fontFamily: 'Poppins',
-  );
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(seedColor: AppColors.purple),
+      fontFamily: 'Poppins',
+      scaffoldBackgroundColor: AppColors.black,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.black,
+      ));
 }
