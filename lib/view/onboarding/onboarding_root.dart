@@ -1,5 +1,6 @@
 import 'package:fitness_tracker/core/config/assets/assets_images.dart';
 import 'package:fitness_tracker/view/onboarding/pages/onboarding.dart';
+import 'package:fitness_tracker/view/onboarding/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingRoot extends StatefulWidget {
@@ -11,6 +12,7 @@ class OnboardingRoot extends StatefulWidget {
 
 class _OnboardingRootState extends State<OnboardingRoot> {
   final ScrollController _scrollController = ScrollController();
+  bool _showWelcomePage = true;
 
   void _nextPage() {
     _scrollController.animateTo(
@@ -18,6 +20,19 @@ class _OnboardingRootState extends State<OnboardingRoot> {
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _init();
+  }
+
+  Future<void> _init() async {
+    await Future.delayed(const Duration(seconds: 2));
+    setState(() {
+      _showWelcomePage = false;
+    });
   }
 
   @override
@@ -40,18 +55,20 @@ class _OnboardingRootState extends State<OnboardingRoot> {
     ];
 
     return Scaffold(
-      body: Stack(children: [
-        ListView(
-          controller: _scrollController,
-          physics: const NeverScrollableScrollPhysics(),
-          scrollDirection: Axis.horizontal,
-          itemExtent: width,
-          children: images,
-        ),
-        OnboardingPage(
-          onActionPressed: _nextPage,
-        ),
-      ]),
+      body: _showWelcomePage
+          ? const WelcomePage()
+          : Stack(children: [
+              ListView(
+                controller: _scrollController,
+                physics: const NeverScrollableScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemExtent: width,
+                children: images,
+              ),
+              OnboardingPage(
+                onActionPressed: _nextPage,
+              ),
+            ]),
     );
   }
 }
