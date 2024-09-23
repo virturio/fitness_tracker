@@ -1,4 +1,4 @@
-import 'package:fitness_tracker/view/auth/signup/pages/signup_page.dart';
+import 'package:fitness_tracker/view/auth/forgot_password/pages/forgot_password_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,7 +12,7 @@ final appRouter = GoRouter(
       path: "/",
       pageBuilder: (context, state) => const MaterialPage(
         key: _pageKey,
-        child: SignUpPage(),
+        child: ForgotPasswordPage(),
       ),
     ),
   ],
