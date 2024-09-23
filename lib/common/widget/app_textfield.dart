@@ -15,11 +15,15 @@ class AppTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle hintStyle = const TextStyle(
-      color: AppColors.black,
+      color: Colors.black38,
       fontSize: 16,
     );
 
-    TextStyle labelStyle = hintStyle.copyWith(fontWeight: FontWeight.bold);
+    TextStyle labelStyle = const TextStyle(
+      fontSize: 16,
+      color: AppColors.black,
+      fontWeight: FontWeight.bold,
+    );
     Widget labelWidget = Text(
       label,
       style: labelStyle,
@@ -38,13 +42,13 @@ class AppTextfield extends StatelessWidget {
             obscuringCharacter: '*',
             decoration: InputDecoration(
               constraints: const BoxConstraints(
-                minHeight: 45,
+                minHeight: 40,
               ),
               filled: true,
               fillColor: AppColors.white,
               border: InputBorder.none,
               contentPadding: const EdgeInsets.symmetric(
-                vertical: 20,
+                vertical: 16,
                 horizontal: 20,
               ),
               hintText: hintText,
