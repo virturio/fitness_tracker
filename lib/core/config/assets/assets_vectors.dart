@@ -7,4 +7,5 @@ abstract class AppVectors {
   static const facebook = "${basePath}facebook.svg";
   static const google = "${basePath}google.svg";
   static const fingerprint = "${basePath}fingerprint.svg";
+  static const fingerprintMark = "${basePath}fingerprint_mark.svg";
 }
