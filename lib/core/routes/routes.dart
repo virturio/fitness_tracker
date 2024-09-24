@@ -1,5 +1,4 @@
-import 'package:fitness_tracker/view/auth/fingerprint/pages/set_fingerprint_page.dart';
-import 'package:fitness_tracker/view/auth/forgot_password/pages/forgot_password_page.dart';
+import 'package:fitness_tracker/view/auth/reset_password/pages/reset_password_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -13,7 +12,7 @@ final appRouter = GoRouter(
       path: "/",
       pageBuilder: (context, state) => const MaterialPage(
         key: _pageKey,
-        child: SetFingerprintPage(),
+        child: ResetPasswordPage(),
       ),
     ),
   ],

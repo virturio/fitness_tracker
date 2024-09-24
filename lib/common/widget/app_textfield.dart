@@ -39,7 +39,6 @@ class AppTextfield extends StatelessWidget {
           clipBehavior: Clip.hardEdge,
           child: TextField(
             obscureText: obscureText,
-            obscuringCharacter: '*',
             decoration: InputDecoration(
               constraints: const BoxConstraints(
                 minHeight: 40,
