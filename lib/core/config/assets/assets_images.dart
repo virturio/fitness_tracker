@@ -6,4 +6,5 @@ abstract class AssetImages {
   static const onboardingB = "${basePath}onboarding_img_b.png";
   static const onboardingC = "${basePath}onboarding_img_c.png";
   static const onboardingD = "${basePath}onboarding_img_d.png";
+  static const setupPageImage = "${basePath}setup_page_img.png";
 }
