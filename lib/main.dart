@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:fitness_tracker/core/config/theme/app_theme.dart';
 import 'package:fitness_tracker/core/routes/routes.dart';
 import 'package:flutter/foundation.dart';

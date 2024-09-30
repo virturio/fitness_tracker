@@ -16,7 +16,7 @@ class SetFingerprintPage extends StatelessWidget {
     double containerHeight = MediaQuery.of(context).size.width * 0.5;
 
     return Scaffold(
-      appBar: const AuthAppbar(
+      appBar: const MainAppbar(
         titleText: 'Set Your Fingerprint',
       ),
       body: Padding(

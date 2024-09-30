@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
         const TextStyle(fontSize: 14, color: AppColors.white);
 
     return Scaffold(
-      appBar: const AuthAppbar(
+      appBar: const MainAppbar(
         titleText: 'Log In',
       ),
       body: SingleChildScrollView(
