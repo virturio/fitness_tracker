@@ -1,6 +1,7 @@
 import 'package:fitness_tracker/common/widget/glass_buton.dart';
 import 'package:fitness_tracker/core/config/theme/app_colors.dart';
 import 'package:fitness_tracker/view/auth/widget/auth_appbar.dart';
+import 'package:fitness_tracker/view/setup/introduction_text.dart';
 import 'package:flutter/material.dart';
 
 class GenderSelectionPage extends StatelessWidget {
@@ -18,7 +19,12 @@ class GenderSelectionPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const _HeroText(),
+            const IntroductionText(
+              title: "What’s Your Gender",
+              subtitle:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua.",
+              backgroundColor: AppColors.purpleLight,
+            ),
             const Expanded(
               child: _ToggleGenderIconButton(),
             ),
@@ -29,42 +35,6 @@ class GenderSelectionPage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class _HeroText extends StatelessWidget {
-  const _HeroText();
-
-  @override
-  Widget build(BuildContext context) {
-    TextStyle titleTextStyle = const TextStyle(
-        fontWeight: FontWeight.bold, fontSize: 20, color: AppColors.white);
-
-    TextStyle smallTextStyle =
-        const TextStyle(fontSize: 14, color: AppColors.white);
-    return Column(
-      children: [
-        Text(
-          "What’s Your Gender",
-          style: titleTextStyle,
-        ),
-        const SizedBox(
-          height: 12,
-        ),
-        Container(
-          decoration: const BoxDecoration(
-            color: AppColors.purpleLight,
-          ),
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-          child: Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua.",
-            style: smallTextStyle,
-            softWrap: true,
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ],
     );
   }
 }

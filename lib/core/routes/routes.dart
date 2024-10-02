@@ -1,4 +1,4 @@
-import 'package:fitness_tracker/view/setup/gender_select/pages/gender_selection_page.dart';
+import 'package:fitness_tracker/view/setup/age_select/pages/age_selection_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,7 +12,7 @@ final appRouter = GoRouter(
       path: "/",
       pageBuilder: (context, state) => const MaterialPage(
         key: _pageKey,
-        child: GenderSelectionPage(),
+        child: AgeSelectionPage(),
       ),
     ),
   ],
